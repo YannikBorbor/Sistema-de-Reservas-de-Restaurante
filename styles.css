@@ -6,7 +6,7 @@
 }
 
 body{
-    background:#f5f5f5;
+    background:linear-gradient(135deg,#fff5e6,#ffe0b2);
     color:#333;
 }
 
@@ -23,6 +23,10 @@ nav{
     justify-content:center;
     gap:20px;
     padding:15px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
 }
 
 nav a{
@@ -33,6 +37,10 @@ nav a{
 
 nav a:hover{
     color:yellow;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 section{
@@ -94,4 +102,102 @@ footer{
     text-align:center;
     padding:20px;
     margin-top:40px;
+}
+
+#menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.plato{
+    overflow:hidden;
+    transition:.4s;
+    text-align:center;
+}
+
+.plato img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.plato:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+header,
+nav,
+section,
+footer{
+    animation:aparecer 1s ease;
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+button{
+
+    background:#8B0000;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:scale(1.08);
+    background:#d62828;
+
+}
+
+
+.plato{
+
+    position:relative;
+
+}
+
+.plato::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:50%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.4);
+
+    transform:skewX(-25deg);
+
+}
+
+.plato:hover::before{
+
+    left:150%;
+
+    transition:1s;
+
 }
