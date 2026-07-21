@@ -126,15 +126,51 @@ Reservar
 
 </section>
 
+</section>
+
+Y reemplázala por esto:
+
 <section id="opiniones">
 
-<h2>Opiniones</h2>
+    <h2>⭐ Opiniones de Clientes</h2>
 
-<p>⭐⭐⭐⭐⭐ Excelente comida.</p>
+    <form id="formOpinion">
 
-<p>⭐⭐⭐⭐ Muy buena atención.</p>
+        <input
+            type="text"
+            id="nombreCliente"
+            placeholder="Tu nombre"
+            required>
 
-<p>⭐⭐⭐⭐⭐ Ambiente agradable.</p>
+        <select id="calificacion" required>
+            <option value="">Selecciona una calificación</option>
+            <option value="⭐">⭐ </option>
+            <option value="⭐⭐">⭐⭐ </option>
+            <option value="⭐⭐⭐">⭐⭐⭐ </option>
+            <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ </option>
+            <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ </option>
+        </select>
+
+        <textarea
+            id="comentario"
+            rows="4"
+            placeholder="Escribe tu opinión..."
+            required></textarea>
+
+        <button type="submit">
+            Publicar Opinión
+        </button>
+
+    </form>
+
+    <div id="listaOpiniones">
+
+        <div class="opinion">
+            <h4>⭐⭐⭐⭐⭐ Carlos</h4>
+            <p>Excelente comida y muy buena atención.</p>
+        </div>
+
+    </div>
 
 </section>
 
